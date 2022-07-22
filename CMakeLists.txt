@@ -7,10 +7,6 @@ if(KEYBOARD_AUTO_TYPE_USE_SANITIZERS AND NOT WIN32)
     add_link_options("-fsanitize=address,undefined")
 endif()
 
-if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-    add_compile_options("-fbracket-depth=1024")
-endif()
-
 if(MSVC)
     add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
     add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
