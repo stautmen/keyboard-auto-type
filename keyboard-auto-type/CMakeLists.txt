@@ -4,7 +4,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+	MESSAGE(Clang)
     add_compile_options("-fbracket-depth=1024")
+else
+	MESSAGE(${CMAKE_CXX_COMPILER_ID})
 endif()
 
 set(SOURCES
